@@ -84,10 +84,15 @@ export default function Hero() {
       <div className="flex flex-col bg-black text-white">
         {/* PROJECTS */}
         <section>
-          <div className="text-center text-5xl font-bold">Projects.</div>
+          <div className="flex flex-col text-center space-y-2">
+            <div className="text-4xl font-bold">Projects.</div>
+            <p className="text-md text-zinc-400">
+              A collection of things I've built for school, or just for fun!
+            </p>
+          </div>
           {/* This is where card generation needs to happen! */}
           <div className="flex flex-row p-8">
-            <div className="max-w-sm rounded overflow-hidden">
+            <div className="max-w-sm rounded overflow-hidden bg-zinc-900">
               <Image
                 alt="placeholder"
                 src="/conjugator.png"
@@ -95,15 +100,24 @@ export default function Hero() {
                 height={100}
                 className="w-full aspect-video object-cover"
               />
-              <div className="px-6 py-4 border border-white">
+              <div className="px-6 py-4 border border-zinc-700">
                 <div className="text-xl font-bold text-center py-3">
                   Conjugator
                 </div>
-                <p className="text-sm">
-                  My conjugator program is the best! and I built it to be the
-                  best too. Built with Python, HTML, CSS and a little
-                  JavaScript.
+                <p className="text-sm text-zinc-400 ml-2">
+                  Built with Python, HTML, CSS and a little JavaScript.
                 </p>
+                <div className="m-2 space-x-4">
+                  <span className="inline-flex items-center transition-all hover:bg-white hover:text-black rounded-md bg-gray-400/10 px-2 py-1 text-xs font-medium text-gray-400 inset-ring inset-ring-gray-400/20">
+                    Python
+                  </span>
+                </div>
+                <div className="flex justify-end">
+                  {/* The button styling here was the work of AI */}
+                  <button className="px-3 py-2 text-sm font-semibold text-white border border-white/20 rounded-md hover:bg-white hover:text-black transition-all duration-300">
+                    View Demo
+                  </button>
+                </div>
               </div>
             </div>
           </div>
