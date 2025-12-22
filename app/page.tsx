@@ -81,11 +81,33 @@ export default function Hero() {
         </motion.div>
       </AuroraBackground>
 
-      {/* PROJECTS */}
       <div className="flex flex-col bg-black text-white">
-        <h3 className="text-center text-3xl font-bold">Projects.</h3>
-
-        <p>Just text to see something.</p>
+        {/* PROJECTS */}
+        <section>
+          <div className="text-center text-5xl font-bold">Projects.</div>
+          {/* This is where card generation needs to happen! */}
+          <div className="flex flex-row p-8">
+            <div className="max-w-sm rounded overflow-hidden">
+              <Image
+                alt="placeholder"
+                src="/conjugator.png"
+                width={300}
+                height={100}
+                className="w-full aspect-video object-cover"
+              />
+              <div className="px-6 py-4 border border-white">
+                <div className="text-xl font-bold text-center py-3">
+                  Conjugator
+                </div>
+                <p className="text-sm">
+                  My conjugator program is the best! and I built it to be the
+                  best too. Built with Python, HTML, CSS and a little
+                  JavaScript.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </div>
   );
