@@ -13,8 +13,9 @@ export default function Hero() {
   const projects = [
     {
       title: "Conjugator",
-      description: "Something I built with Python, HTML, CSS and Javascript.",
-      image: "/conjugator.png",
+      description:
+        "A site meant to act as a revision site for students studying French at GCSE/A-Level. Allows the user to generate conjugation quizzes, and have their progress tracked through a dashboard. To be improved in the future.",
+      image: "/conjugator2.png",
       technologies: [
         "Python",
         "HTML",
@@ -29,9 +30,26 @@ export default function Hero() {
     {
       title: "Pomodoro Timer",
       description:
-        "A small timer project I did to improve my skills in Tkinter.",
-      image: "/placeholder.jpg",
+        "A small timer project I did to improve my skills in Tkinter, and my object-oriented programming skills.",
+      image: "/pomodoro.png",
       technologies: ["Python", "Tkinter"],
+    },
+
+    {
+      title: "TravelPal",
+      description:
+        "For GreatUniHack 2025. A site meant to act as a matchmaker for travellers. An AI agent was implemented to suggest possible destinations based on the user's interests and profile.",
+      image: "/guh.png",
+      technologies: [
+        "Python",
+        "HTML",
+        "CSS",
+        "Javascript",
+        "React",
+        "TailwindCSS",
+        "Flask",
+        "SQL",
+      ],
     },
   ];
 
@@ -74,7 +92,7 @@ export default function Hero() {
               />
               {/* aspect-square = container remains 1:1 and object-cover here to fill the square and crop the edges... very interesting */}
               <div className="flex flex-col items-center space-y-3">
-                <h2 className="text-3xl text-center font-bold bg-linear-to-r from-zinc-500 to-zinc-200 bg-clip-text text-transparent py-1 md:text-5xl">
+                <h2 className="text-3xl text-center font-bold bg-linear-to-r from-zinc-500 to-zinc-200 bg-clip-text text-transparent py-1 md:text-5xl animate-text-flow bg-[length:200%_auto]">
                   Hey, my name's Daniel Gyabaah.
                 </h2>
 
@@ -121,7 +139,7 @@ export default function Hero() {
           <div className="flex flex-col gap-6 p-8 items-center md:justify-center md:flex-row md:items-stretch">
             {/* Gap is great because it works both ways! */}
             {projects.map((project) => (
-              <div className="max-w-sm flex flex-col flex-1 border border-zinc-700 rounded overflow-hidden bg-zinc-900">
+              <div className="max-w-sm flex flex-col flex-1 border border-zinc-700 rounded overflow-hidden bg-zinc-900/85 backdrop-filter backdrop-blur-sm">
                 <Image
                   alt="placeholder"
                   src={project.image}
