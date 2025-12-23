@@ -5,6 +5,9 @@ import { motion } from "framer-motion";
 import React from "react";
 import { AuroraBackground } from "@/components/ui/aurora-background";
 import { cn } from "@/lib/utils";
+{
+  /* An import for the dotted background. */
+}
 
 export default function Hero() {
   const projects = [
@@ -48,15 +51,12 @@ export default function Hero() {
           <header className="absolute top-0 left-0 right-0 flex justify-center p-8">
             {" "}
             {/* This absolute here fixed a massive issue. Please cover it more thoroughly soon, just like every other piece of AI in here. */}
-            <div className="space-x-2 p-4 text-white backdrop-filter rounded-3xl backdrop-blur-sm bg-white/15 md:space-x-30">
-              <a href="#" className="font-semibold">
+            <div className="space-x-15 p-4 border border-white/20 text-white backdrop-filter rounded-3xl backdrop-blur-sm bg-white/15 transition-all duration-300">
+              <a href="#" className="font-semibold hover:text-zinc-400">
                 Projects
               </a>
-              <a href="#" className="font-semibold">
+              <a href="#" className="font-semibold hover:text-zinc-400">
                 Experience
-              </a>
-              <a href="#" className="font-semibold">
-                About Me
               </a>
             </div>
           </header>
@@ -74,12 +74,12 @@ export default function Hero() {
               />
               {/* aspect-square = container remains 1:1 and object-cover here to fill the square and crop the edges... very interesting */}
               <div className="flex flex-col items-center space-y-3">
-                <h2 className="text-xl font-bold bg-linear-to-r from-blue-500 to-blue-200 bg-clip-text text-transparent py-1 md:text-5xl sm:text-center">
+                <h2 className="text-3xl text-center font-bold bg-linear-to-r from-zinc-500 to-zinc-200 bg-clip-text text-transparent py-1 md:text-5xl">
                   Hey, my name's Daniel Gyabaah.
                 </h2>
 
-                <p className="text-transparent text-center w-50 bg-linear-to-r from-blue-200 to-blue-500 bg-clip-text">
-                  I am currently a 1st year Computer Science student @ The
+                <p className="text-transparent text-center w-50 bg-zinc-300 bg-clip-text md:w-100">
+                  I'm currently a 1st year Computer Science student @ The
                   University of Manchester.
                 </p>
                 <div className="flex flex-row space-x-4">
@@ -118,7 +118,7 @@ export default function Hero() {
           </div>
 
           {/* This is where card generation needs to happen! */}
-          <div className="flex flex-col gap-6 p-8 justify-center md:flex-row">
+          <div className="flex flex-col gap-6 p-8 items-center md:justify-center md:flex-row md:items-stretch">
             {/* Gap is great because it works both ways! */}
             {projects.map((project) => (
               <div className="max-w-sm flex flex-col flex-1 border border-zinc-700 rounded overflow-hidden bg-zinc-900">
