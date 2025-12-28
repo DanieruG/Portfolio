@@ -70,7 +70,7 @@ export default function Hero() {
             {" "}
             {/* This absolute here fixed a massive issue. Please cover it more thoroughly soon, just like every other piece of AI in here. */}
             <div className="space-x-15 p-4 border border-white/20 text-white backdrop-filter rounded-3xl backdrop-blur-sm bg-white/15 transition-all duration-300">
-              <a href="#" className="font-semibold hover:text-zinc-400">
+              <a href="#section1" className="font-semibold hover:text-zinc-400">
                 Projects
               </a>
               <a href="#" className="font-semibold hover:text-zinc-400">
@@ -125,11 +125,13 @@ export default function Hero() {
         </motion.div>
       </AuroraBackground>
 
-      <div className="flex flex-col bg-black text-white">
+      <div className="flex flex-col items-center bg-black text-white">
         {/* PROJECTS */}
         <section>
           <div className="flex flex-col text-center space-y-2">
-            <div className="text-4xl font-bold">Projects.</div>
+            <div className="text-4xl font-bold" id="section1">
+              Projects.
+            </div>
             <p className="text-md text-zinc-400">
               A collection of things I've built for school, or just for fun!
             </p>
@@ -139,7 +141,7 @@ export default function Hero() {
           <div className="flex flex-col gap-6 p-8 items-center md:justify-center md:flex-row md:items-stretch">
             {/* Gap is great because it works both ways! */}
             {projects.map((project) => (
-              <div className="max-w-sm flex flex-col flex-1 border border-zinc-700 rounded overflow-hidden bg-zinc-900/85 backdrop-filter backdrop-blur-sm">
+              <div className="max-w-sm flex flex-col flex-1 border border-zinc-700 rounded overflow-hidden bg-zinc-900/85 transition-all duration-300 hover:bg-zinc-800/20">
                 <Image
                   alt="placeholder"
                   src={project.image}
@@ -178,6 +180,15 @@ export default function Hero() {
                 </div>
               </div>
             ))}
+          </div>
+        </section>
+
+        <section>
+          <div className="flex flex-col text-center space-y-2 mt-20">
+            <div className="text-4xl font-bold">Experience.</div>
+            <div className="text-md text-zinc-400">
+              This includes work, education, and other extra exploits.
+            </div>
           </div>
         </section>
       </div>
