@@ -184,7 +184,7 @@ export default function Hero() {
         </section>
 
         <section>
-          <div className="flex flex-col text-center space-y-2 mt-20">
+          <div className="flex flex-col text-center space-y-2 mt-10">
             <div className="text-4xl font-bold">Experience.</div>
             <div className="text-md text-zinc-400">
               This includes work, education, and other extra exploits.
