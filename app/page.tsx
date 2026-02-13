@@ -22,60 +22,115 @@ export default function Hero() {
             duration: 0.8,
             ease: "easeInOut",
           }}
-          className="relative h-full flex flex-col justify-center items-center"
+          className="relative h-full flex flex-col justify-center items-stretch px-6 md:px-12"
         >
           <header className="absolute top-0 left-0 right-0 flex justify-center p-8">
-            {" "}
-            {/* This absolute here fixed a massive issue. Please cover it more thoroughly soon, just like every other piece of AI in here. */}
-            <div className="space-x-15 p-4 border border-white/20 text-white backdrop-filter rounded-3xl backdrop-blur-sm bg-white/15 transition-all duration-300">
-              <a href="#section1" className="font-semibold hover:text-zinc-400">
-                Projects
+            <div className="flex items-center max-w-6xl w-full p-4 border border-white/20 text-white backdrop-filter rounded-xl backdrop-blur-sm bg-white/15 transition-all duration-300 relative">
+              <a
+                href="#"
+                className="text-2xl font-bold hover:text-zinc-400 space-x-7 self-start"
+              >
+                Daniel G
               </a>
-              <a href="#" className="font-semibold hover:text-zinc-400">
-                Experience
-              </a>
+              <div className="space-x-15 mx-auto">
+                <a
+                  href="#"
+                  className="font-semibold hover:text-zinc-400 hover:px-6 hover:rounded-md border border-zinc-500 rounded-xl p-2 transition-all duration-300"
+                >
+                  About Me
+                </a>
+                <a
+                  href="#section1"
+                  className="font-semibold hover:text-zinc-400 hover:rounded-md hover:px-6 border border-zinc-500 rounded-xl p-2 transition-all duration-300"
+                >
+                  Projects
+                </a>
+                <a
+                  href="#"
+                  className="font-semibold hover:text-zinc-400 hover:rounded-md hover:px-6 border border-zinc-500 rounded-xl p-2 transition-all duration-300"
+                >
+                  Experience
+                </a>
+              </div>
             </div>
           </header>
 
-          {/* MAIN HEADER */}
-
-          <section>
-            <div className="flex flex-col items-center space-x-4 md:flex-row">
+          {/* MAIN HERO CONTENT */}
+          <section className="w-full">
+            <div className="flex flex-row items-center space-x-20">
               <Image
                 alt="Profile Placeholder"
                 src="/IMG_6980.jpg"
                 width="200"
                 height="200"
-                className="overflow-hidden rounded-full aspect-square object-cover"
+                className="w-60 h-60 rounded-full object-cover shrink-0 hidden lg:block"
               />
-              {/* aspect-square = container remains 1:1 and object-cover here to fill the square and crop the edges... very interesting */}
-              <div className="flex flex-col items-center space-y-3">
-                <h2 className="text-3xl text-center font-bold bg-linear-to-r from-zinc-500 to-zinc-200 bg-clip-text text-transparent py-1 md:text-5xl animate-text-flow bg-[length:200%_auto]">
-                  Hey, my name's Daniel Gyabaah.
-                </h2>
-
-                <p className="text-transparent text-center w-50 bg-zinc-300 bg-clip-text md:w-100">
-                  I'm currently a 1st year Computer Science student @ The
-                  University of Manchester.
+              <div className="flex flex-col space-y-6 md:space-y-8">
+                {/* Headline */}
+                <p className="text-sm md:text-base text-zinc-500 font-medium uppercase tracking-wider">
+                  Hey, I'm Daniel Gyabaah.
                 </p>
-                <div className="flex flex-row space-x-4">
-                  <Link href={"https://github.com/DanieruG"}>
-                    <Image
-                      alt="GHub"
-                      src="./github.svg"
-                      width="30"
-                      height="30"
-                      className="brightness-0 invert"
-                    />
-                  </Link>
-                  <Link href={"https://www.linkedin.com/in/daniel-gyabaah/"}>
-                    <Image
-                      alt="LinkedIn"
-                      src="./linkedin.svg"
-                      width="30"
-                      height="30"
-                    />
-                  </Link>
+                <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
+                  I build web applications
+                  <span className="block text-zinc-400">
+                    that solve real problems.
+                  </span>
+                </h1>
+
+                {/* Subtitle */}
+                <p className="text-lg md:text-xl text-zinc-300 max-w-2xl leading-relaxed">
+                  Full-stack developer studying BSc Computer Science at{" "}
+                  <span className="bg-linear-to-r from-purple-600 via-purple-400 to-yellow-400 bg-clip-text text-transparent ">
+                    The University of Manchester
+                  </span>
+                  . I turn ideas into products using React, Flask, and modern
+                  web tools.
+                </p>
+
+                {/* CTA Buttons + Social Links */}
+                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 pt-2">
+                  <div className="flex gap-4">
+                    <a
+                      href="#section1"
+                      className="px-6 py-3 bg-white text-black font-semibold rounded-lg hover:bg-zinc-200 transition-colors"
+                    >
+                      View Projects
+                    </a>
+                    <a
+                      href="#"
+                      className="px-6 py-3 border-2 border-white/30 text-white font-semibold rounded-lg hover:border-white/50 hover:bg-white/5 transition-all"
+                    >
+                      Download CV
+                    </a>
+                  </div>
+
+                  {/* Social Links */}
+                  <div className="flex gap-4 sm:ml-4">
+                    <Link
+                      href={"https://github.com/DanieruG"}
+                      className="hover:opacity-70 transition-opacity"
+                    >
+                      <Image
+                        alt="GitHub"
+                        src="./github.svg"
+                        width="24"
+                        height="24"
+                        className="brightness-0 invert"
+                      />
+                    </Link>
+                    <Link
+                      href={"https://www.linkedin.com/in/daniel-gyabaah/"}
+                      className="hover:opacity-70 transition-opacity"
+                    >
+                      <Image
+                        alt="LinkedIn"
+                        src="./linkedin.svg"
+                        width="24"
+                        height="24"
+                        className="brightness-0 invert"
+                      />
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
