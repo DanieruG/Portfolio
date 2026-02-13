@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Python } from "./icons";
 
 export default function Cards() {
   type Project = {
@@ -76,8 +77,9 @@ export default function Cards() {
               {project.technologies.map((tech) => (
                 <span
                   key={tech}
-                  className="inline-flex items-center transition-all hover:bg-white hover:text-black rounded-md bg-gray-400/10 px-2 py-1 text-xs font-medium text-gray-400 inset-ring inset-ring-gray-400/20"
+                  className="inline-flex gap-2 items-center transition-all hover:bg-white hover:text-black rounded-md bg-gray-400/10 px-2 py-1 text-xs font-medium text-gray-400 inset-ring inset-ring-gray-400/20"
                 >
+                  <Python width={10} height={10} />
                   {tech}
                 </span>
               ))}
