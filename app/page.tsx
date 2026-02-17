@@ -2,15 +2,14 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import React from "react";
 import { AuroraBackground } from "@/components/ui/aurora-background";
 import Cards from "@/components/cards";
-import { cn } from "@/lib/utils";
-{
-  /* An import for the dotted background. */
-}
+import { useState } from "react";
+import Modal from "@/components/modal";
 
 export default function Hero() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <div className="overflow-hidden w-full">
       <AuroraBackground className="bg-black">
@@ -26,12 +25,6 @@ export default function Hero() {
         >
           <header className="absolute top-0 left-0 right-0 flex justify-center p-8">
             <div className="flex items-center max-w-6xl w-full p-4 border border-white/20 text-white backdrop-filter rounded-xl backdrop-blur-sm bg-white/15 transition-all duration-300 relative">
-              <a
-                href="#"
-                className="text-2xl font-bold hover:text-zinc-400 space-x-7 self-start"
-              >
-                Daniel G
-              </a>
               <div className="space-x-15 mx-auto">
                 <a
                   href="#"
@@ -79,12 +72,12 @@ export default function Hero() {
 
                 {/* Subtitle */}
                 <p className="text-lg md:text-xl text-zinc-300 max-w-2xl leading-relaxed">
-                  Full-stack developer studying BSc Computer Science at{" "}
+                  Aspiring front-end developer studying BSc Computer Science at{" "}
                   <span className="bg-linear-to-r from-purple-600 via-purple-400 to-yellow-400 bg-clip-text text-transparent ">
                     The University of Manchester
                   </span>
-                  . I turn ideas into products using React, Flask, and modern
-                  web tools.
+                  . I specialise in using React.js and TypeScript to create easy
+                  to use applications.
                 </p>
 
                 {/* CTA Buttons + Social Links */}
@@ -96,12 +89,15 @@ export default function Hero() {
                     >
                       View Projects
                     </a>
-                    <a
-                      href="#"
+                    <button
+                      onClick={() => setIsOpen(true)}
                       className="px-6 py-3 border-2 border-white/30 text-white font-semibold rounded-lg hover:border-white/50 hover:bg-white/5 transition-all"
                     >
                       Download CV
-                    </a>
+                    </button>
+                    <Modal isOpen={isOpen} isClosed={() => setIsOpen(false)}>
+                      <p className="text-zinc-300 text-center mb-5">Hi</p>
+                    </Modal>
                   </div>
 
                   {/* Social Links */}
