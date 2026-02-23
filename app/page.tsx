@@ -3,9 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { AuroraBackground } from "@/components/ui/aurora-background";
-import Cards from "@/components/cards";
+import Cards from "@/components/Cards";
 import { useState } from "react";
-import Modal from "@/components/modal";
+import Modal from "@/components/Modal";
 
 export default function Hero() {
   const [isOpen, setIsOpen] = useState(false);
@@ -147,18 +147,44 @@ export default function Hero() {
           </div>
 
           {/* This is where card generation needs to happen! */}
-          <div className="flex flex-col gap-6 p-8 items-center md:justify-center md:flex-row md:items-stretch">
+          <div className="flex flex-col gap-15 p-8 items-center md:justify-center md:flex-row md:items-stretch">
             {/* Gap is great because it works both ways! */}
 
             <Cards />
           </div>
         </section>
 
-        <section>
+        <section className="w-full max-w-7xl space-y-2">
           <div className="flex flex-col text-center space-y-2 mt-10">
-            <div className="text-4xl font-bold">Experience.</div>
+            <div className="text-4xl font-bold">Profile.</div>
             <div className="text-md text-zinc-400">
               This includes work, education, and other extra exploits.
+            </div>
+
+            <div className="flex flex-col p-2 items-start border border-zinc-700 rounded-md space-y-0.5">
+              <div className="text-3xl text-zinc-400 font-semibold">
+                Education
+              </div>
+              <div className="text-xl text-zinc-400">
+                The University of Manchester
+              </div>
+              <div className="text-md text-zinc-400 italic">
+                BSc Computer Science (Sep 2025 - Jul 2028)
+              </div>
+              <p>Modules include: x, y, z and much, much more...</p>
+            </div>
+
+            <div className="flex flex-col p-2 items-start border border-zinc-700 rounded-md space-y-0.5">
+              <div className="text-3xl text-zinc-400 font-semibold">
+                Experience
+              </div>
+              <div className="text-xl text-zinc-400">
+                The University of Manchester
+              </div>
+              <div className="text-md text-zinc-400 italic">
+                BSc Computer Science (Sep 2025 - Jul 2028)
+              </div>
+              <p>Modules include: x, y, z and much, much more...</p>
             </div>
           </div>
         </section>
